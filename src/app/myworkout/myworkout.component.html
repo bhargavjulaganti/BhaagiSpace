@@ -1,0 +1,26 @@
+<h1>
+  myworkout log!
+</h1>
+
+
+<table  *ngIf="showTodaysWorkout" class="table table-hover table-bordered" style="width:25%">
+  <thead>
+    <tr>
+      <th scope="col">WorkoutType</th>
+      <th scope="col">Set1</th>
+      <th scope="col">Set2</th>
+      <th scope="col">Set3</th>
+      <th scope="col">Set4</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr class="table-primary" id="todaysWorkoutTable" *ngFor="let item of finalTodaysWorkout">
+      <td id="todaysWorkoutRow">{{item.WorkOutType}}</td>
+      <td id="todaysWorkoutRow">{{item.Set1}}</td>
+      <td id="todaysWorkoutRow">{{item.Set2}}</td>
+      <td id="todaysWorkoutRow">{{item.Set3}}</td>
+      <td id="todaysWorkoutRow">{{item.Set4}}</td>
+    </tr>
+  </tbody>
+</table>
